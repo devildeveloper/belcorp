@@ -250,3 +250,14 @@ form.login-form .links a {
 select#languaje {
   color: #888;
 }
+/*modificaciones por bryant*/
+.registrate{
+  color: rgb(119, 119, 119);
+  font-weight: lighter;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  padding-top: 20px;
+  position: absolute;
+  bottom: 7px;
+  right: 210px; 
+}

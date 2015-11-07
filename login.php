@@ -39,7 +39,7 @@
               </button>
             </p>
           </div>
-         
+          <a class="registrate" href="login_modal/php/index.html" target="_self">Regístrate</a>
         </form>
 
       </div>
