@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>| Pregunta</title>
+<style type="text/css">
+* { margin:0; padding:0; border:0; outline:0; }
+body { background-color:transparent; }
+label, input, select, textarea { font:normal 12px Arial;  }
+input, select, textarea { display:block; width:250px; border:1px solid #DDDDDD; margin:0; padding:4px; border-radius:3px; }
+input:focus, select:focus, textarea:focus { border-color:#0E8CCC; }
+select { width:auto; }
+form p { position:relative; margin:0 0 10px;}
+label { position:absolute; top:0; left:0; width:230px; display:block; color:#777; margin:5px 5px 5px 6px; padding:0; }
+form br { display:none; }
+textarea { height:80px; overflow:hidden; }
+
+input.hidden { display:none; visibility:hidden; }
+input.button { width:auto; font-weight:bold; color:#FFFFFF; background:#2BA4E2; margin-bottom:0; padding:3px 10px; cursor:pointer; cursor:hand; }
+
+</style>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.infieldlabel.min.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  $("label").inFieldLabels();
+  $("input").attr("autocomplete","off");
+});
+</script> 
+<script type="text/javascript">
+//  Verificar si email es válido
+function valida_email(email){
+  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+    return (0);
+  }
+}
+
+function validac(){
+  var nombre     = document.formcont.v_nombre.value;
+ // var pais       = document.formcont.v_pais.value;
+//  var email      = document.formcont.v_email.value; 
+  var pregunta   = document.formcont.v_pregunta.value;
+  if(nombre == ""){
+    alert("Ingrese su nombre y apellidos.");
+    document.formcont.v_nombre.focus();
+    return false;
+  }
+ // if(pais == "0"){
+ // alert("Seleccione su país.");
+ //   document.formcont.v_pais.focus();
+ //   return;
+ // } 
+  //if(email == ""){
+    //alert("Ingrese su email.");
+    //document.formcont.v_email.focus();
+    //return false;
+  //}
+  //if(email!=""&&valida_email(email)==0){
+    //alert("El email ingresado no es válido, ingréselo nuevamente.");
+    //document.formcont.v_email.focus();
+    //return false;
+  //} 
+  if(pregunta == ""){
+    alert("Ingrese su pregunta.");
+    document.formcont.v_pregunta.focus();
+    return false;
+  }  
+  document.formcont.action="pregunta_mtr.php";
+  document.formcont.submit();
+}
+</script>
+</head>
+
+<!--body onLoad="document.formcont.reset();"-->
+<body>
+<form name="formcont" id="consulta" method="post" target="_self">
+  <p>    
+    <label for="v_nombre">Nombre</label><br />
+    <input type="text" name="v_nombre" id="v_nombre" />
+  </p>
+  <p>                   
+    <label for="v_pregunta">Pregunta</label><br />
+    <textarea name="v_pregunta" id="v_pregunta"></textarea>
+  </p>
+  <input type="button" class="button" value="Enviar" onclick="javascript:validac();" />
+</form>
+</body>
+</html>

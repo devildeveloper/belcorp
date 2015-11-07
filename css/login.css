@@ -1,0 +1,252 @@
+/* File: login.css*/
+/* Estilos CSS3 
+ *      Contiene los estilos apropiados para toda 
+ *  la pagina de login.html 
+ */
+
+div.div-page-footer {
+  position: absolute;
+  left: 50%;
+  width: 330px;
+  margin-left: -165px;
+  height: 80px;
+  top: 90%;
+  margin-top: -40px;
+}
+
+div.div-login-body {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+div.div-login-form {
+  position: absolute;
+  left: 50%;
+  width: 650px;
+  margin-left: -325px;
+  top: 50%;
+  height: 132px;
+  margin-top: -66px;
+}
+
+form.login-form {
+  /* Tama�o y posicion */
+  width: 650px;
+  padding: 10px;
+  position: relative;
+
+  /* Sombreado */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  background: #CECECE;
+  background: -moz-linear-gradient(#EEEFEF, #FFFFFF 10%);
+  background: -ms-linear-gradient(#EEEFEF, #FFFFFF 10%);
+  background: -o-linear-gradient(#EEEFEF, #FFFFFF 10%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEFEF), color-stop(0.1, #FFFFFF));
+  background: -webkit-linear-gradient(#EEEFEF, #FFFFFF 10%);
+  background: linear-gradient(#EEEFEF, #FFFFFF 10%);
+
+  /* Convierte los elementos en bloques */
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+form.login-form .logo {
+  /* Dise�o de logo. */
+  width: 300px;
+  text-align: center;
+}
+
+form.login-form .logo .name {
+  text-indent: -9999px;
+}
+
+form.login-form .logo img {
+  float: none;
+}
+
+form.login-form .field {
+  position: relative;
+  width: 300px;
+  right: -30px;
+}
+
+form.login-form .field i {
+  /* Tama�o y posicion */
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  /* Linea divisora icono - placeholder*/
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0 0 rgba(255,255,255,0.7);
+  /* Dise�o */
+  color: #777777;
+  text-align: center;
+  line-height: 2rem;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+
+form.login-form input[type=email],
+form.login-form input[type=password],
+form.login-form input[type=text]{
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  /* Tama�o y posicion */
+  width: 100%;
+  padding: 10px 18px 10px 45px;
+  /* Estilo */
+  border: none; /* Eliminamos el borde por defecto */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 3px 2px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  background: #f9f9f9;
+  color: #777777;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+/* Separacion entre el campo del usuario con el password*/
+form.login-form input[type=email],
+form.login-form input[type=text]{
+  margin-bottom: 10px;
+}
+
+/* Efecto de cambio de color cuando pasa el puntero por el campo*/
+form.login-form input[type=email]:hover ~ i,
+form.login-form input[type=password]:hover ~ i,
+form.login-form input[type=text]:hover ~i
+form.login-form .links i:hover {
+  color: #702789;
+}
+
+/* Efecto de cambio de color cuando el foco esta en el campo*/
+form.login-form input[type=email]:focus ~ i,
+form.login-form input[type=password]:focus ~ i,
+form.login-form input[type=text]:focus ~ i{
+  color: #702789;
+}
+
+/* Eliminamos el borde que por defecto se genera alrededor del campo.*/
+form.login-form input[type=email]:focus,
+form.login-form input[type=password]:focus,
+form.login-form button[type=submit]:focus,
+form.login-form input[type=text]:focus{
+  outline: none;
+}
+
+/* Dise�o del boton submit*/
+form.login-form .submit {
+  /* Tama�o y posicion */
+  margin-top: 20px;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 17px;
+  right: -25px;
+  padding: 10px;
+  z-index: 2;
+  /* Dise�o */
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1), 0 3px 2px rgba(0,0,0,0.1), inset 0 -3px 2px rgba(0,0,0,0.2);
+}
+
+form.login-form .submit:after {
+  /* Tama�o y posicion */
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -2px;
+  left: 30px;
+  /* Dise�o */
+  background: white;
+  box-shadow: 0 62px white, -32px 31px white;
+}
+
+form.login-form button {
+  /* Tama�o y posicion */
+  width: 100%;
+  height: 100%;
+  margin-top: -1px;
+  /* Dise�o del icono */
+  font-size: 1.4em;
+  line-height: 1.75;
+  color: white;
+  /* Dise�o */
+  border: none; /* Removemos el borde por defecto */
+  border-radius: inherit;
+  background: #702789; /* Fallback */
+  background: -moz-linear-gradient(#702789, #702789);
+  background: -ms-linear-gradient(#702789, #702789);
+  background: -o-linear-gradient(#702789, #702789);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#702789), to(#702789));
+  background: -webkit-linear-gradient(#702789, #702789);
+  background: linear-gradient(#702789, #702789);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.35), inset 0 3px 2px rgba(255,255,255,0.2), inset 0 -3px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Efectos que se activan al pasar el puntero por el boton submit.*/
+form.login-form button:hover,
+form.login-form button[type=submit]:focus {
+  background: #702789;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Efecto que se activa al pulsar el boton submit*/
+form.login-form button:active {
+  background: #702789;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.3), inset 0 3px 4px rgba(0,0,0,0.3);
+}
+
+/* Posicion y efecto a los link de recordar contrase�a y nuevo usuario.*/
+form.login-form .links {
+  width: 325px;
+  text-align: right;
+  padding-top: 10px;
+}
+
+form.login-form .links i {
+  right: -30px;
+  color: #777777;
+  /*  padding-right: 10px;*/
+  padding-right: 3.5px;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+form.login-form .links a {
+  padding-left: 2px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+select#languaje {
+  color: #888;
+}
