@@ -19,12 +19,15 @@
             height: 100%;
             background: #DDD url("../../images/noise-background-10.png") repeat scroll left top;            
         }
+        .title{
+            color:#702789;
+        }
     </style>
 </head>
 <body>
     <form class="form-login-popup" id="registration">
-        <h1><span class="title">Transmision en vivo</span></h1>
-        <h1><span class="subtitle">Registro</span></h1>
+        <h1><span class="title" style="color:#702789;"> REGISTRO DE TRANSMISIÓN EN VIVO</span></h1>
+        <!--<h1><span class="subtitle">Registro</span></h1>-->
         <p class="float" style="width: 100%;">
             <label for="login"><i class="icon-user"></i> Nombres (*)</label>
             <input type="text" name="txtName" id="txtName" placeholder="Nombres" required="required" />
@@ -305,9 +308,12 @@
         </p>
         <span>(*) Datos Obligatorios</span>
         <p class="clearfix">
-            <a href="#" onclick="realizaCambio('#registration', '#login'); return false;" style="text-align: center;">
-                <label>Regresar al formulario de ingreso.</label></a>
-            <a href="#" onclick="realizaProcesoRegistration($('#txtName').val(),$('#txtLastName').val(), $('#txtEmailRegistration1').val(), $('#txtEmailRegistration2').val(), $('#txtClave1').val(), $('#txtClave2').val(),$('#txtPais').val(),$('#txtJerarquia').val()); return false;" class="sign-in" style="text-align: center;">Regístrate!</a>
+            <a href="../../login.php"  style="text-align: center;">
+                <label>Regresar al formulario de ingreso.</label>
+            <!--onclick="realizaCambio('#registration', '#login'); return false;" -->
+            </a>
+            
+            <a href="#" onclick="realizaProcesoRegistration($('#txtName').val(),$('#txtLastName').val(), $('#txtEmailRegistration1').val(), $('#txtEmailRegistration2').val(), $('#txtClave1').val(), $('#txtClave2').val(),$('#txtPais').val(),$('#txtJerarquia').val()); return false;" class="sign-in" style="text-align: center;background:#702789">Regístrate!</a>
             <span id="resultado-registration"></span>
         </p>
     </form>  
