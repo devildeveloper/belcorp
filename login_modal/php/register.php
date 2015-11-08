@@ -6,12 +6,13 @@ require_once('enviar_correo.php');
 $mensaje = '';
 	
 	$name = $_POST['txtName'];
+	$lastName = $_POST['txtLastName'];
 	$email = $_POST['txtEmail1'];
-	$password = $_POST['txtClave1'];
 	$pais = $_POST['txtPais'];
-	$ocupacion = $_POST['txtOcupacion'];
+	$jerarquia = $_POST['txtJerarquia'];
+	$password = $_POST['txtClave'];
 
-	$usuario = new Usuario($name,$email,$password,$pais,$ocupacion);
+	$usuario = new Usuario($email,$password,$pais,$jerarquia,$lastName,$name);
 	
 	$resultado = $usuario->insertALL();
 	

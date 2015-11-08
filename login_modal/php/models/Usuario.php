@@ -17,7 +17,7 @@ class Usuario {
 	public function insertALL() 
 	{		
 			
-			$rs = new query("SELECT * FROM belcrop_usuarios WHERE email = '$this->email'");
+			$rs = new query("SELECT * FROM belcorp_usuarios WHERE email = '$this->email'");
 			if ($rs->n > 0) {
 				return 2;
 			}

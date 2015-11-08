@@ -176,8 +176,8 @@
         }
     }
 
-    function realizaProcesoRegistration(valorName, valorEmail1, valorEmail2,  valorClave1, valorClave2, valorPais, valorOcupacion) {		
-        if (valorName == '' || valorEmail1 == '' || valorEmail2 == '' || valorClave1 == '' || valorClave2 == '' || valorPais == '' || valorOcupacion == '') {
+    function realizaProcesoRegistration(valorName, valorApellido,valorEmail1, valorEmail2,valorClave1,valorClave2, valorPais, valorJerarquia) {		
+        if (valorName == '' || valorApellido == '' || valorEmail1 == '' || valorEmail2 == '' || valorPais == '' || valorJerarquia == ''  || valorClave1 =='' || valorClave2 == '') {
             $("#resultado-registration").css("color", "red");
             $("#resultado-registration").html(" No deje ning&uacute;n campo requerido en vacio. ");			
         }  else if(!validateEmail(valorEmail1)) {
@@ -199,22 +199,25 @@
         else {
             var parametros = {
                 "txtName": valorName, 
+                "txtLastName":valorApellido,
                 "txtEmail1": valorEmail1, 
-                "txtClave1":valorClave1, 
                 "txtPais": valorPais, 
-                "txtOcupacion": valorOcupacion
+                "txtJerarquia":valorJerarquia,
+                "txtClave" : valorClave1
             };
+            console.log(parametros)
             $.ajax({
                 data: parametros,
-                url: './login_modal/php/register.php',
+                url: '../php/register.php',
                 type: 'post',
                 beforeSend: function () {
                     $("#resultado-registration").css("text-align", "center");
                     $("#resultado-registration").html("<img src='http://rotacode.com/files/web/images/portada/loading.gif' width='20' height='20'/>");
                 },
                 success: function (response) {     
-					response = eliminarEspacion(response);				
-                    if (response == "1") {
+					//response = eliminarEspacion(response);
+					console.log(response)		
+                    /*if (response == "1") {
                         $("#resultado-registration").css("color", "#888");
                         $("#resultado-registration").html("Se envi&oacute; los datos de acceso a su correo");
 						 setTimeout(function () {
@@ -232,7 +235,7 @@
                     } else if (response == "0") {
                         $("#resultado-registration").css("color", "red");
                         $("#resultado-registration").html(" No se pudo registrar los datos, actualize(F5) la p&aacute;gina. ");
-                    } 
+                    } */
                 }
             });
         }
