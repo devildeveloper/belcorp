@@ -44,10 +44,10 @@ class CEnviarCorreo {
 	$mail->SMTPAuth = true;
 	$mail->SMTPSecure = "ssl";
 
-	$mail->Host = "smtp.gmail.com";
+	$mail->Host = "alterlatina.tv";
 	$mail->Port = 465;
-	$mail->Username = "maliaga.pantoja@gmail.com";
-	$mail->Password = "Isl_2012";
+	$mail->Username = "mario@alterlatina.tv";
+	$mail->Password = "Mario$357";
 
 	$mail->From = "consultas.congreso2013@gmail.com";
 	$mail->FromName = "IV Congreso Internacional de Regulacion";

@@ -3,10 +3,10 @@
 
 class bd {
 
-	var $usuari = "root" ;//"alter_uloginform"; 
-	var $clau = "" ;//"C~2MRE_?";
-	var $servidor = "127.0.0.1" ;//"192.254.142.42";
-	var $nomBD = "alter";// "altertv_loginform";
+	var $usuari = "alter_uloginform"; 
+	var $clau = "C~2MRE_?";
+	var $servidor = "192.254.142.42";
+	var $nomBD = "altertv_loginform";
 
 	var $conn;
 	var $debug;
