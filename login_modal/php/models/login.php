@@ -14,21 +14,24 @@ class login
 		$this->email = $mail;
 		$this->password = $clave;
 		$this->mensaje = 'Se contruyo el login.';
+                $this->autenticado = 0;
 		if ($clave == '') {
 			$this->recuperarClave();
 		}
-		else 
+		else {
 			$this->autenticarUser();
+                }
     }
 	
 	function validarEmail() 
 	{
 		$rs = new query("SELECT * FROM belcorp_usuarios WHERE email = '$this->email'");
-		if ($rs->n > 0) 
+		if ($rs->n > 0) {
 			return true;
-			
-		else 
+                }
+		else { 
 			return false;
+                }
 	}
 	
 	function autenticarUser()

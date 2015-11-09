@@ -8,10 +8,14 @@ class Usuario {
 	public 		$mensaje;
 
 
-	public function __construct($email, $password)
+	public function __construct($email,$password,$pais,$jerarquia,$lastName,$name)
     {		
+		$this->name = $name;
+		$this->lastName = $lastName;
+		$this->pais = $pais;
+		$this->jerarquia = $jerarquia;
 		$this->email = $email;
-		$this->password = $password;	
+		$this->password = $password;					
     }
 	
 	public function insertALL() 
@@ -23,8 +27,8 @@ class Usuario {
 			}
 			else {
 			
-				$this->query = "INSERT INTO belcorp_usuarios (email, password)
-									VALUES	('$this->email', '$this->password')";
+				$this->query = "INSERT INTO belcorp_usuarios (name,lastName,email,pais,jerarquia,password)
+									VALUES	('$this->name','$this->lastName','$this->email','$this->pais','$this->jerarquia','$this->password' )";
 
 				if(new query($this->query)) { 
 					$this->mensaje = 'Se agrego al usuario correctamente...!'; 

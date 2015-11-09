@@ -177,7 +177,8 @@
     }
 
     function realizaProcesoRegistration(valorName, valorApellido,valorEmail1, valorEmail2,valorClave1,valorClave2, valorPais, valorJerarquia) {		
-        if (valorName == '' || valorApellido == '' || valorEmail1 == '' || valorEmail2 == '' || valorPais == '' || valorJerarquia == ''  || valorClave1 =='' || valorClave2 == '') {
+        if (valorName == '' || valorApellido == '' || valorEmail1 == '' || valorEmail2 == '' || valorPais == '' || valorJerarquia == ''  || valorClave1 =='' || valorClave2 == ''
+        	|| valorPais == 0 || valorJerarquia== 0) {
             $("#resultado-registration").css("color", "red");
             $("#resultado-registration").html(" No deje ning&uacute;n campo requerido en vacio. ");			
         }  else if(!validateEmail(valorEmail1)) {
@@ -216,26 +217,26 @@
                 },
                 success: function (response) {     
 					//response = eliminarEspacion(response);
-					console.log(response)		
-                    /*if (response == "1") {
+					//console.log(response)
+                    if (response.search(1) != -1 ) {
                         $("#resultado-registration").css("color", "#888");
                         $("#resultado-registration").html("Se envi&oacute; los datos de acceso a su correo");
 						 setTimeout(function () {
                             $('#resultado-login').slideUp('slow');
 							
 							}, 3000);
-							window.location = "http://www.suruna.com/suruna_rep/suruna/Front-End/congresoregulacionperu2013/";						
+							window.location = "../../login.php";						
 						$('#preguntas-email').html(valorCaja1);
 							GLOBAL_EMAIL = valorEmail1;
 							recuperarDatos_Nombre();
                     }
-                    else if (response == "2") {
+                    else if (response.search(2) != -1 ) {
                         $("#resultado-registration").css("color", "red");
                         $("#resultado-registration").html(" El email ingresado ya est&aacute; registrado. ");
-                    } else if (response == "0") {
+                    } else if (response.search(0) != -1 ) {
                         $("#resultado-registration").css("color", "red");
                         $("#resultado-registration").html(" No se pudo registrar los datos, actualize(F5) la p&aacute;gina. ");
-                    } */
+                    } 
                 }
             });
         }

@@ -3,10 +3,11 @@
 
 class bd {
 
-	var $usuari = "alter_uloginform"; 
-	var $clau = "C~2MRE_?";
-	var $servidor = "192.254.142.42";
-	var $nomBD = "altertv_loginform";
+	var $usuari = "root" ;//"alter_uloginform"; 
+	var $clau = "" ;//"C~2MRE_?";
+	var $servidor = "127.0.0.1" ;//"192.254.142.42";
+	var $nomBD = "alter";// "altertv_loginform";
+
 	var $conn;
 	var $debug;
 	
@@ -85,19 +86,3 @@ class query extends bd{
 }
 
 ?>
-
-// <?php
-	// $dbuser="alter_uloginform";
-	// $dbpass="C~2MRE_?";
-	// $dbname="altertv_loginform";
-	// $chandle = mysql_connect("192.254.142.42", $dbuser, $dbpass) or die("error conectando a la bbdd");
-	// echo "conectado correctamente";
-	// mysql_select_db($dbname, $chandle) or die ($dbname . " base de datos no encontrada." . $dbuser);
-	// echo "base de datos " . $database . " seleccionada";
-	// mysql_close($chandle);	
-// ?>
-
-// <?php
-	// $rs = new query("SELECT * FROM osinergmin_usuarios WHERE email = 'asd@asd.com'");
-	// echo $rs->n;
-// ?>

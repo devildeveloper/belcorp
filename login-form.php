@@ -2,10 +2,11 @@
 
 error_reporting(E_ALL);
 if ($_POST) {
-    include_once './models/DBConnection.php';
-    include_once './models/login.php';    
-    
     session_start();
+    include_once './login_modal/php/models/DBConnection.php';
+    include_once './login_modal/php/models/login.php';    
+    
+    
     
     $email = $_POST['txtEmail'];
     $clave = $_POST['txtClave'];
